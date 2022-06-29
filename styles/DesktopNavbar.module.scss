@@ -1,0 +1,41 @@
+.navbar {
+  position: fixed;
+  overflow: auto;
+  height: 100%;
+  width: 300px;
+  background-color: #000;
+  padding: var(--margin);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: #959ca0;
+  gap: 50px;
+
+    &::-webkit-scrollbar{
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb{
+        width: 5px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+  .logo {
+    img {
+      width: 70px !important;
+      height: 115px !important;
+    }
+  }
+
+
+
+  
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .navbar{
+    display: none;
+  }
+}

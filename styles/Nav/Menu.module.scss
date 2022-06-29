@@ -1,0 +1,56 @@
+.navLinks {
+    & > ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      & > li {
+        span {transform: translateY( 3px);
+          display: inline-flex;
+          color: #959ca0;
+          font-size: 1.5rem;
+
+         
+        }
+
+        &.active,
+        & > :where(a, span):hover {
+          color: #fff;
+        }
+
+        a {
+          font-size: 20px;
+          font-family: "Nunito", sans-serif;
+          transition: color 0.2s;
+        }
+      }
+    }
+    li .dropdown {
+      overflow: hidden;
+      height: 0;
+      transition: height 0.5s, margin 0.5s;
+
+      &.active {
+        height: 177px;
+      }
+
+      ul {
+        height: 137px;
+        margin-block: 20px;
+        padding-left: 20px;
+        gap: 8px;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+        li {
+          a {
+            font-size: 16px;
+            font-family: "Nunito", sans-serif;
+          }
+        }
+      }
+    }
+  }

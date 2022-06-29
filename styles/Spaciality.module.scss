@@ -1,0 +1,88 @@
+.spaciality {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--margin);
+  padding: 100px var(--margin);
+
+  button {
+    background-color: #0000;
+    padding: 8px 12px;
+    font-size: 14;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: background-color 0.5s, color 0.5s;
+    font-weight: 500;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .left,
+  .right {
+    width: 50%;
+  }
+
+  .left {
+    color: #fff;
+
+    h2 {
+      font-size: 26px;
+      margin-top: 0;
+    }
+
+    p {
+      color: #6d7275;
+      font-size: 18px;
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 30px;
+
+      .list {
+        font-size: 18px;
+        color: #fff;
+        display: flex;
+        align-items: flex-start;
+        line-height: 1em;
+        gap: 10px;
+
+        span {
+          color: #959ca0;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:900px) {
+  .spaciality{
+    flex-direction: column;
+
+    .left,.right{
+      width: 100%;
+    }
+
+    .right{
+      flex-direction: column;
+      gap: 50px;
+
+      .grid{
+        margin-top: 50px;
+        grid-template-columns: repeat(1,1fr);
+      }
+    }
+  }
+}

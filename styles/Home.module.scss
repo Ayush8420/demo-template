@@ -1,0 +1,17 @@
+.container {
+  min-height: 100vh;
+  width: calc(100% - 300px);
+  float: right;
+  background-color: #000;
+  color: #fff;
+  background-image: url(https://the7.io/elementor-minimal-creative-dark/wp-content/uploads/sites/83/2021/08/artbgcr.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  .container{
+    width: 100%;
+  }
+}

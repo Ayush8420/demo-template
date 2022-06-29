@@ -1,0 +1,89 @@
+.navbar {
+  background-color: #000;
+  height: 75px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  padding-inline: var(--margin);
+  z-index: 10000;
+
+  .menu {
+    cursor: pointer;
+    svg {
+      transform: translateY(3px);
+    }
+  }
+}
+
+.backdrop {
+  background-color: #fff1;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  transition: opacity 0.5s;
+  z-index: 100000;
+
+  &.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.slider {
+  background-color: #010101;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 275px;
+  padding: var(--margin);
+  color: #959ca0;
+  transition: left 0.5s;
+  z-index: 100000;
+  
+  &.active {
+    left: 0;
+  }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .socialDiv {
+    margin-top: 40px;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navbar {
+    .socialDiv {
+      display: none;
+    }
+  }
+
+  .slider .socialDiv {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    display: none;
+  }
+}

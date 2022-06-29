@@ -1,0 +1,75 @@
+.brands {
+  margin-block: 100px;
+  position: relative;
+
+  // * {
+  //   outline: 1px solid;
+  // }
+
+  .swiper {
+    width: calc(100% - (var(--margin) * 2));
+    .slide {
+      width: 100%;
+      cursor: pointer;
+      .imgBx {
+        width: 100%;
+        position: relative;
+
+        &:hover::before {
+          opacity: 0;
+        }
+
+        &::before {
+          content: "";
+          height: 100%;
+          width: 100%;
+          background-color: #0006;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 1;
+          z-index: 1;
+          transition: opacity 0.5s;
+        }
+        & > span {
+          width: 100% !important;
+        }
+        img {
+          object-fit: contain;
+          object-position: center center;
+        }
+      }
+    }
+  }
+  .nextBtn,
+  .prevBtn {
+    position: absolute;
+    top: 50%;
+    width: var(--margin);
+    height: calc(var(--margin) * 2);
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      color: #aaa;
+      font-size: 36px;
+      transition: color 0.2s;
+    }
+
+    &:hover svg {
+      color: #fff;
+    }
+  }
+
+  .nextBtn {
+    right: 0;
+  }
+
+  .prevBtn {
+    left: 0;
+  }
+}

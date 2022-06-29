@@ -1,0 +1,122 @@
+.container {
+  margin-top: var(--margin);
+  display: flex;
+  font-family: "Nunito", sans-serif;
+  --primary-txt: #959ca0;
+  justify-content: space-between;
+  gap: var(--margin);
+  padding-inline: var(--margin);
+
+  .left {
+    width: 60%;
+    h2 {
+      color: var(--primary-txt);
+      font-weight: 500;
+      font-size: 28px;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #fff;
+      font-weight: 500;
+
+      span {
+        color: var(--primary-txt);
+      }
+    }
+  }
+
+  .right {
+    width: 200px;
+    position: relative;
+    text-align: right;
+
+    h3 {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 16px;
+      color: #fff;
+
+      span {
+        position: relative;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      transform: translate(-50%, -50%);
+      overflow: visible;
+    }
+
+    path {
+      stroke: #aaa;
+      stroke-width: 8px;
+      stroke-dasharray: 1850 2000;
+      stroke-dashoffset: 1851;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      animation: animate 10s infinite;
+    }
+  }
+}
+
+@keyframes animate {
+  10%,90%{
+    stroke-dashoffset: 0;
+  }
+  
+  90%{
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  
+  100%{
+    stroke-dashoffset: 0;
+    opacity: 0;
+
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .container .right {
+    text-align-last: left;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    margin-top: 200px;
+    margin-bottom: 50px;
+
+    .left,
+    .right {
+      width: 100%;
+    }
+
+    .left {
+      h2 {
+        font-size: 26px;
+      }
+
+      h1 {
+        font-size: 38px;
+        margin-bottom: 0;
+      }
+    }
+
+    .right {
+      h3 {
+        margin-top: 0;
+      }
+    }
+  }
+}

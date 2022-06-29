@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  height: 100px;
+  gap: 20px;
+  padding-inline: var(--margin);
+
+ 
+
+  .left,
+  .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    p{
+        color: #959ca0a1;
+        width: 100%;
+        font-size: 14px;
+        margin: 0;
+    }
+  }
+
+  .left {
+    p {
+      text-align: left;
+    }
+  }
+
+  .right {
+    p {
+      text-align: right;
+    }
+  }
+}
+
+
+@media  screen and (max-width: 900px) {
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .left,.right{
+            width: 100%;
+
+            p{
+                text-align: center;
+            }
+        }
+    }
+}

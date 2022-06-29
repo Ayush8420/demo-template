@@ -1,0 +1,58 @@
+.text {
+  display: inline-block;
+  position: relative;
+  height: 1em;
+
+  &,
+  & * {
+    // outline: 1px solid;
+  }
+  .word {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: max-content;
+
+    span {
+      display: inline-block;
+      opacity: 0;
+      transform: scale(1);
+      animation: animate2 0.05s calc(var(--i) * 0.1s);
+      transition: opacity 0.1s calc((var(--i) * 0.1s));
+    }
+
+    &.active {
+      span {
+        animation: animate 0.1s calc(var(--i) * 0.1s);
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  90% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: scale(0);
+  }
+}
